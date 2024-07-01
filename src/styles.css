@@ -1,0 +1,99 @@
+.App {
+  height: 100vh;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1{
+  font-size: 2vw;
+  text-align: center;
+}
+
+
+
+.code-edit-container {
+  position: relative;
+  height: 30em;
+  width: 50vw;
+  border: 1px solid hsl(0, 0%, 60%);
+  background-color: hsl(212, 35%, 95%);
+  margin: 1em 0;
+}
+
+.code-input,
+.code-output {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  border: none;
+  font-size: 0.8rem;
+  background: transparent;
+  white-space: pre-wrap;
+  line-height: 1.5em;
+  word-wrap: break-word;
+  font-size: 1rem;
+}
+
+.code-input {
+  opacity: 0.5;
+  margin: 0;
+  color: hsl(0, 0%, 40%);
+  resize: none;
+  padding: 0;
+}
+
+textarea {
+  width: 100%;
+  height:  30em;
+  outline: none;
+}
+
+.code-output {
+  pointer-events: none;
+  z-index: 3;
+  margin: 0;
+  overflow-y: auto;
+  padding: 0;
+}
+
+code {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+  color: hsl(0, 0%, 40%);
+  font-size: 1rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+
+
+/* overrides */
+.code-edit-container :not(pre) > code[class*="language-"],
+.code-edit-container pre[class*="language-"] {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+
+pre[class*="language-"]:before,pre[class*="language-"]:after {
+  display: none;
+}
+
+pre[class*="language-"] {
+  border-left: 0px;
+}
+
+code[class*="language"]{
+  padding: 0;
+}
