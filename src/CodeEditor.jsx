@@ -1,8 +1,18 @@
 import React, { useState, useEffect ,useRef } from "react";
-import * as Prism from "prismjs";
+import Prism from "prismjs";
 
 const CodeEditor = (props) => {
-    const [content, setContent] = useState('');
+    const [content, setContent] = useState(`import React   from "react";
+import "./styles.css";
+
+export default function App() {
+  return (
+    <div className="App">
+      <h1>React Code Syntax Highlighter</h1>
+    </div>
+  );
+}
+`);
 
     const div1Ref = useRef(null);
     const div2Ref = useRef(null);
